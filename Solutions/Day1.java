@@ -50,16 +50,18 @@ public class Day1 {
 		// Get file
 		File textFile = new File("C:\\eclipseJP-23\\eclipse-java-workspace\\AdventOfCode2024\\src\\day1\\file.txt");
 		Scanner reader;
+		
 		try {
 			// Read in each line and split it between the lists
 			reader = new Scanner(textFile);	
 			while (reader.hasNextLine()) {
-		        String data = reader.nextLine();
-		        String[] num = new String[2];
-		        num = data.split("   ");
-		        list1.add(Integer.parseInt(num[0]));
-		        list2.add(Integer.parseInt(num[1]));
+			        String data = reader.nextLine();
+			        String[] num = new String[2];
+			        num = data.split("   ");
+			        list1.add(Integer.parseInt(num[0]));
+			        list2.add(Integer.parseInt(num[1]));
 			}
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
